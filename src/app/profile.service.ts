@@ -31,4 +31,15 @@ export class ProfileService {
   }
 
 
+  updateProfile(firstName: string, lastName: string, email: string, id: number ) {
+    this.httpClient.put( this.URL + id, {
+      firstName, lastName, email
+    } ).subscribe();
+
+}
+
+deleteProfile( id: number ) {
+  this.httpClient.delete( this.URL + id );
+}
+
 }

@@ -29,4 +29,15 @@ export class EvaluationService {
       reviewerEmail, date, time, profileId
     } ).subscribe();
 }
+
+
+  updateEvaluation(reviewerEmail: string, date: string, time: string, profileId : number ) {
+    this.httpClient.put( this.URL, {
+      reviewerEmail, date, time, profileId
+    } ).subscribe();
+  }
+
+  deleteEvaluation( id: number ) {
+    this.httpClient.delete( this.URL + id );
+  }
 }
