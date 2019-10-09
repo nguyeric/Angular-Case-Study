@@ -5,11 +5,17 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AddProfileComponent } from './add-profile/add-profile.component';
+import { AddEvaluationComponent } from './add-evaluation/add-evaluation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents
+    routingComponents,
+    NavbarComponent,
+    AddProfileComponent,
+    AddEvaluationComponent
   ],
   imports: [
     BrowserModule,

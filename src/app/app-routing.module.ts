@@ -1,7 +1,9 @@
+import { AddEvaluationComponent } from './add-evaluation/add-evaluation.component';
 import { HomeComponent } from './home/home.component';
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AddProfileComponent } from './add-profile/add-profile.component';
 
 
 const routes: Routes = [
@@ -9,16 +11,16 @@ const routes: Routes = [
   //Whenever we add a Component to a path here, you must add it to the array "routingComponents"
   //    at the bottom of the page.
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent}
-
-
+  { path: 'home', component: HomeComponent},
+  { path: 'addProfile', component: AddProfileComponent },
+  { path: 'addEvaluation', component: AddEvaluationComponent }
 
 
   //Not currently in use:
   /*
   ,
-  { path: 'addProfile', component: AddProfileComponent },
-  { path: 'addEvaluation', component: AddEvaluationComponent },
+  
+ 
 
   { path: 'getProfile/:id', component: GetProfileComponent },
   { path: 'getEvaluation/:id', component: GetEvaluationComponent },
@@ -37,4 +39,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [HomeComponent]
+export const routingComponents = [HomeComponent,AddProfileComponent,AddEvaluationComponent]
