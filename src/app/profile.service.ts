@@ -22,4 +22,13 @@ export class ProfileService {
     return this.httpClient.get( this.URL + id );
 
   }
+
+  addProfile(firstName: string, lastName: string, email: string ) {
+      this.httpClient.post( this.URL, {
+        firstName, lastName, email
+      } ).subscribe();
+
+  }
+
+
 }

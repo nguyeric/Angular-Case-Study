@@ -22,4 +22,11 @@ export class EvaluationService {
     return this.httpClient.get( this.URL + id );
 
   }
+
+
+  addEvaluation(reviewerEmail: string, date: string, time: string, profileId : number ) {
+    this.httpClient.post( this.URL, {
+      reviewerEmail, date, time, profileId
+    } ).subscribe();
+}
 }

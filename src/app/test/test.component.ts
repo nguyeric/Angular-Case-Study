@@ -51,6 +51,10 @@ export class TestComponent implements OnInit {
       }
     )
 
+      //this.profileService.addProfile('Michael','CEElery','michael.eats.grass@gmail.com');
+      //this.evaluationService.addEvaluation('michael.eats.grass@gmail.com', '10/10/21', '3: 42 PM' ,  7);
+
+
 
 
   }
