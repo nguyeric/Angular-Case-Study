@@ -6,11 +6,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { AddProfileComponent } from './add-profile/add-profile.component';
 import { ListProfileComponent } from './list-profile/list-profile.component';
 import { ListEvaluationComponent } from './list-evaluation/list-evaluation.component';
+import {NavbarComponent} from './navbar/navbar.component';
 
 
 const routes: Routes = [
 
-  //Whenever we add a Component to a path here, you must add it to the array "routingComponents"
+  // Whenever we add a Component to a path here, you must add it to the array "routingComponents"
   //    at the bottom of the page.
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent},
@@ -19,11 +20,11 @@ const routes: Routes = [
 
   { path: 'listProfile', component: ListProfileComponent },
   { path: 'listEvaluation', component: ListEvaluationComponent }
-  //Not currently in use:
+  // Not currently in use:
   /*
   ,
-  
- 
+
+
 
   { path: 'getProfile/:id', component: GetProfileComponent },
   { path: 'getEvaluation/:id', component: GetEvaluationComponent },
@@ -42,4 +43,11 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [HomeComponent,AddProfileComponent,AddEvaluationComponent,ListProfileComponent,ListEvaluationComponent]
+export const routingComponents = [
+  HomeComponent,
+  AddProfileComponent,
+  AddEvaluationComponent,
+  ListProfileComponent,
+  ListEvaluationComponent,
+  NavbarComponent
+];
