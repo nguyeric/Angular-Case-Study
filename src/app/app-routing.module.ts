@@ -4,6 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddProfileComponent } from './add-profile/add-profile.component';
+import { ListProfileComponent } from './list-profile/list-profile.component';
+import { ListEvaluationComponent } from './list-evaluation/list-evaluation.component';
 
 
 const routes: Routes = [
@@ -13,9 +15,10 @@ const routes: Routes = [
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent},
   { path: 'addProfile', component: AddProfileComponent },
-  { path: 'addEvaluation', component: AddEvaluationComponent }
+  { path: 'addEvaluation', component: AddEvaluationComponent },
 
-
+  { path: 'listProfile', component: ListProfileComponent },
+  { path: 'listEvaluation', component: ListEvaluationComponent }
   //Not currently in use:
   /*
   ,
@@ -25,8 +28,8 @@ const routes: Routes = [
   { path: 'getProfile/:id', component: GetProfileComponent },
   { path: 'getEvaluation/:id', component: GetEvaluationComponent },
 
-  { path: 'listProfile', component: ListProfileComponent },
-  { path: 'listEvaluation', component: ListEvaluationComponent },
+
+
 
   { path: 'updateProfile/:id', component: UpdateProfileComponent },
   { path: 'updateEvaluation/:id', component: UpdateEvaluationComponent }
@@ -39,4 +42,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [HomeComponent,AddProfileComponent,AddEvaluationComponent]
+export const routingComponents = [HomeComponent,AddProfileComponent,AddEvaluationComponent,ListProfileComponent,ListEvaluationComponent]
