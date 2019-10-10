@@ -9,15 +9,15 @@ export class ProfileService {
 
   readonly URL = 'http://localhost:8080/api/profiles/';
 
-  constructor(private httpClient: HttpClient) { 
+  constructor(private httpClient: HttpClient) {
   }
 
-  getProfileList(){
+  getProfileList() {
     return this.httpClient.get( this.URL);
   }
 
 
-  getProfileById( id: number ){
+  getProfileById( id: number ) {
 
     return this.httpClient.get( this.URL + id );
 

@@ -24,23 +24,17 @@
 			</tr>
 		</thead>
 		<tbody>
-            <!--
-                Original code commented out:
-			<c:forEach items='${profiles}' var="profile">
-				<tr>
-					<td>${profile.getId() }</td>
-					<td>${profile.getFirstName() }</td>
-					<td>${profile.getLastName() }</td>
-					<td>${profile.getEmail() }</td>
-					<td>
-						<a class="btn btn-primary" href="/getProfile/${profile.getId()}">View</a>
-						<a class="btn btn-info" href="/updateProfile/${profile.getId()}">Edit</a>
-						<a class="btn btn-danger" href="/deleteProfile/${profile.getId()}">Delete</a>
-					</td>
-
-				</tr>
-            </c:forEach>
-            -->
+      <tr *ngFor="let profile of profiles;">
+        <td>{{profile.id}}</td>
+        <td>{{profile.firstName}}</td>
+        <td>{{profile.lastName}}</td>
+        <td>{{profile.email}}</td>
+        <td>
+          <a class="btn btn-primary" href="/getProfile/{{profile.id}}">View</a>
+          <a class="btn btn-info m-1" href="/updateProfile/{{profile.id}}">Edit</a>
+          <a class="btn btn-danger" href="/deleteProfile/{{profile.id}}">Delete</a>
+        </td>
+      </tr>
 		</tbody>
 	</table>
 
