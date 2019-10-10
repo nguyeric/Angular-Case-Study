@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {EvaluationService} from '../evaluation.service';
+import {ProfileService} from '../profile.service';
 
 @Component({
   selector: 'app-add-evaluation',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddEvaluationComponent implements OnInit {
 
-  constructor() { }
+  profiles = {};
+
+  constructor(private evaluationService: EvaluationService,
+              private profileService: ProfileService) { }
 
   ngOnInit() {
+    this.profileService.getProfileList().subscribe(
+      data => {
+        this.profiles = data;
+      }
+    );
+  }
+
+  addEvaluation(evaluation) {
+    this.evaluationService.addEvaluation(
+      evaluation.reviewerEmail,
+      evaluation.date,
+      evaluation.time,
+      evaluation.profileId);
   }
 
 }

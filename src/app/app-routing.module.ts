@@ -7,6 +7,7 @@ import { AddProfileComponent } from './add-profile/add-profile.component';
 import { ListProfileComponent } from './list-profile/list-profile.component';
 import { ListEvaluationComponent } from './list-evaluation/list-evaluation.component';
 import {NavbarComponent} from './navbar/navbar.component';
+import {TestComponent} from './test/test.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,9 @@ const routes: Routes = [
   { path: 'addEvaluation', component: AddEvaluationComponent },
 
   { path: 'listProfile', component: ListProfileComponent },
-  { path: 'listEvaluation', component: ListEvaluationComponent }
+  { path: 'listEvaluation', component: ListEvaluationComponent },
+
+  {path: 'test', component: TestComponent}
   // Not currently in use:
   /*
   ,
