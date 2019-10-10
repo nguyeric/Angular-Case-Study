@@ -1,12 +1,3 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-
-</head>
-<body>
 <app-navbar></app-navbar>
 
 <div class="container">
@@ -26,26 +17,18 @@
 			</tr>
 		</thead>
 		<tbody>
-            <!--
-			<c:forEach items='${evaluations}' var="evaluation">
-				<tr>
-					<td>${evaluation.getId() }</td>
-					<td>${evaluation.getReviewerEmail() }</td>
-					<td>
-					${evaluation.getInterviewDate().getDate()} ${evaluation.getInterviewDate().getMonth() } ${evaluation.getInterviewDate().getYear() }
-					</td>
-					<td>
-					${evaluation.getInterviewDate().getHours() }:${evaluation.getInterviewDate().getMinutes() }
-					</td>
-					<td>${evaluation.getRating()}</td>
-					<td>
-						<a class="btn btn-primary" href="/getEvaluation/${evaluation.getId()}">View</a>
-						<a class="btn btn-info" href="/updateEvaluation/${evaluation.getId()}">Edit</a>
-						<a class="btn btn-danger" href="/deleteEvaluation/${evaluation.getId()}">Delete</a>
-					</td>
-				</tr>
-            </c:forEach>
-            -->
+      <tr *ngFor="let evaluation of evaluations;">
+        <td>{{evaluation.id}}</td>
+        <td>{{evaluation.email}}</td>
+        <td></td>
+        <td></td>
+        <td>{{evaluation.rating}}</td>
+        <td>
+          <a class="btn btn-primary" href="/getEvaluation/{{evaluation.id}}">View</a>
+          <a class="btn btn-info m-1" href="/updateEvaluation/{{evaluation.id}}">Edit</a>
+          <a class="btn btn-danger" href="/deleteEvaluation/{{evaluation.id}}">Delete</a>
+        </td>
+      </tr>
 		</tbody>
 	</table>
 
@@ -53,6 +36,3 @@
 </div>
 </div>
 </div>
-
-</body>
-</html>
