@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'listProfile', component: ListProfileComponent },
   { path: 'listEvaluation', component: ListEvaluationComponent },
 
-  {path: 'test', component: TestComponent}
+  {path: 'test', component: TestComponent},
 
   { path: 'getProfile/:id', component: GetProfileComponent },
   { path: 'getEvaluation/:id', component: GetEvaluationComponent }
