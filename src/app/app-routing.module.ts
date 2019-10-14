@@ -10,6 +10,7 @@ import {NavbarComponent} from './navbar/navbar.component';
 import {TestComponent} from './test/test.component';
 import { GetProfileComponent } from './get-profile/get-profile.component';
 import { GetEvaluationComponent } from './get-evaluation/get-evaluation.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
 
 
 const routes: Routes = [
@@ -27,22 +28,13 @@ const routes: Routes = [
   {path: 'test', component: TestComponent},
 
   { path: 'getProfile/:id', component: GetProfileComponent },
-  { path: 'getEvaluation/:id', component: GetEvaluationComponent }
-
+  { path: 'getEvaluation/:id', component: GetEvaluationComponent },
+  { path: 'updateProfile/:id', component: UpdateProfileComponent }
 
   // Not currently in use:
   /*
 
 
-
-
-
-
-
-
-
-
-  { path: 'updateProfile/:id', component: UpdateProfileComponent },
   { path: 'updateEvaluation/:id', component: UpdateEvaluationComponent }
   */
 
@@ -61,5 +53,6 @@ export const routingComponents = [
   ListEvaluationComponent,
   NavbarComponent,
   GetProfileComponent,
-  GetEvaluationComponent
+  GetEvaluationComponent,
+  UpdateProfileComponent
 ];
