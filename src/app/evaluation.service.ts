@@ -31,11 +31,11 @@ export class EvaluationService {
     interviewDate.setMinutes(parseInt(time.substring(3), 10));
     console.log(interviewDate);
 
-    const params = new HttpParams().set('profileId', profileId);
+    const params = new HttpParams().set('profileId', String(profileId));
 
 
     this.httpClient.post( this.URL, {
-      reviewerEmail, interviewDate, profileId
+      reviewerEmail, interviewDate
     }, {
       params
     } ).subscribe();

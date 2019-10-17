@@ -8,6 +8,7 @@ import { TestComponent } from './test/test.component';
 import {FormsModule} from '@angular/forms';
 import { GetProfileComponent } from './get-profile/get-profile.component';
 import { GetEvaluationComponent } from './get-evaluation/get-evaluation.component';
+import { ChartsComponent } from './charts/charts.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { GetEvaluationComponent } from './get-evaluation/get-evaluation.componen
     TestComponent,
     routingComponents,
     GetProfileComponent,
-    GetEvaluationComponent
+    GetEvaluationComponent,
+    ChartsComponent
   ],
   imports: [
     BrowserModule,

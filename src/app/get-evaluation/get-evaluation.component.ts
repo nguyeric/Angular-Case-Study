@@ -12,7 +12,7 @@ import { formatDate } from '@angular/common';
 })
 export class GetEvaluationComponent implements OnInit {
   evaluation$: any;
-  profile$: any
+  profile$: any;
   date: Date;
   dateString: string;
   timeString: string;
@@ -34,7 +34,7 @@ export class GetEvaluationComponent implements OnInit {
       //Date Stuff
       this.date = new Date(this.evaluation$.interviewDate);
       this.dateString = this.formatDateI(this.date);
-    
+
       //Time stuff.
       //Being lazy and doing a string slice here hopefully this holds up!
       this.timeString = this.date.toString().slice(16,24);
@@ -42,7 +42,7 @@ export class GetEvaluationComponent implements OnInit {
       //Name
       this.profName = this.evaluation$.profile.firstName;
 
-    })  
+    })
 
 }
 
@@ -54,9 +54,9 @@ export class GetEvaluationComponent implements OnInit {
       day = '' + d.getDate(),
       year = d.getFullYear();
 
-  if (month.length < 2) 
+  if (month.length < 2)
       month = '0' + month;
-  if (day.length < 2) 
+  if (day.length < 2)
       day = '0' + day;
 
   return [year, month, day].join('-');

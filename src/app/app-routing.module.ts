@@ -10,6 +10,7 @@ import {NavbarComponent} from './navbar/navbar.component';
 import {TestComponent} from './test/test.component';
 import { GetProfileComponent } from './get-profile/get-profile.component';
 import { GetEvaluationComponent } from './get-evaluation/get-evaluation.component';
+import {ChartsComponent} from './charts/charts.component';
 
 
 const routes: Routes = [
@@ -24,7 +25,9 @@ const routes: Routes = [
   { path: 'listProfile', component: ListProfileComponent },
   { path: 'listEvaluation', component: ListEvaluationComponent },
 
-  {path: 'test', component: TestComponent}
+  { path: 'charts', component: ChartsComponent },
+
+  {path: 'test', component: TestComponent},
 
   { path: 'getProfile/:id', component: GetProfileComponent },
   { path: 'getEvaluation/:id', component: GetEvaluationComponent }

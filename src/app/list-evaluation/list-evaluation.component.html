@@ -19,9 +19,9 @@
 		<tbody>
       <tr *ngFor="let evaluation of evaluations;">
         <td>{{evaluation.id}}</td>
-        <td>{{evaluation.email}}</td>
-        <td></td>
-        <td></td>
+        <td>{{evaluation.reviewerEmail}}</td>
+        <td>{{evaluation.interviewDate | date: 'shortDate'}}</td>
+        <td>{{evaluation.interviewDate | date: 'shortTime'}}</td>
         <td>{{evaluation.rating}}</td>
         <td>
           <a class="btn btn-primary" href="/getEvaluation/{{evaluation.id}}">View</a>
