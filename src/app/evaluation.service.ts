@@ -31,7 +31,7 @@ export class EvaluationService {
     interviewDate.setMinutes(parseInt(time.substring(3), 10));
     console.log(interviewDate);
 
-    const params = new HttpParams().set('profileId', String(profileId));
+    const params = new HttpParams().set('profileId', profileId.toString());
 
 
     this.httpClient.post( this.URL, {

@@ -9,6 +9,7 @@ import {FormsModule} from '@angular/forms';
 import { GetProfileComponent } from './get-profile/get-profile.component';
 import { GetEvaluationComponent } from './get-evaluation/get-evaluation.component';
 import { ChartsComponent } from './charts/charts.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ChartsComponent } from './charts/charts.component';
     routingComponents,
     GetProfileComponent,
     GetEvaluationComponent,
-    ChartsComponent
+    ChartsComponent,
+    UpdateProfileComponent
   ],
   imports: [
     BrowserModule,
